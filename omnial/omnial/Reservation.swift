@@ -20,7 +20,7 @@ struct ReservationModel {
     
     private (set) var reservation = Reservation()
     
-    private (set) var reservations = [Reservation()]
+    private (set) var reservations = [Reservation]()
     
     struct ReservationArray: Decodable {
         var reservations: [Reservation] = []

@@ -12,7 +12,7 @@ struct CalendarView: View {
     
     @ObservedObject var viewModel = ReservationViewModel()
     
-    let newReservation = viewModel.reservations
+   // let newReservation = viewModel.reservations
     
     
     let reservations: [Reservation]  = [Reservation(id: 1, roomId: 1, personId: 1, time1: "11:50", time2: "12:40", date: "02.03.2024"), Reservation(id: 2, roomId: 1, personId: 1, time1: "14:35", time2: "15:25", date: "02.03.2024"),Reservation(id: 3, roomId: 1, personId: 1, time1: "08:00", time2: "08:50", date: "03.03.2024"),Reservation(id: 4, roomId: 1, personId: 1, time1: "11:50", time2: "12:40", date: "03.03.2024"),Reservation(id: 5, roomId: 1, personId: 1, time1: "07:05", time2: "07:55", date: "04.03.2024")
@@ -42,11 +42,12 @@ struct CalendarView: View {
      ]
    
       var dates = [
-        String(Calendar.current.date(byAdding: .day, value: 0, to: Date())),
-        String(Calendar.current.date(byAdding: .day, value: 1, to: Date())),
-        String(Calendar.current.date(byAdding: .day, value: 2, to: Date())),
-        String(Calendar.current.date(byAdding: .day, value: 3, to: Date())),
-        String(Calendar.current.date(byAdding: .day, value: 4, to: Date()))
+        "01.03.2024",
+        "02.03.2024",
+        "03.03.2024",
+        "04.03.2024",
+        "05.03.2024",
+        
       ]
     
     let currentDate = Date()
@@ -343,8 +344,8 @@ struct CalendarView: View {
         
     }/*.task{
         let reservations = await loadAllReservations(weekDay: "04.04.2023")
-        viewModel.reservationLoaded(reservations)*/
-    }
+        viewModel.reservationLoaded(reservations)
+    }*/
 }
 
 struct CalendarView_Previews: PreviewProvider {
